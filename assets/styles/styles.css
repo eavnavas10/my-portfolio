@@ -18,6 +18,22 @@
 
 }
 
+/* Modo oscuro */
+[data-theme="dark"] {
+    --body-color: rgb(20, 20, 20);
+    --color-white: rgb(34, 34, 34);
+
+    --text-color-second: rgb(200, 200, 200);
+    --text-color-third: rgb(0, 255, 255);
+
+    --first-color: rgb(75, 63, 160);
+    --first-color-hover: rgb(30, 72, 180);
+
+    --second-color: rgb(0, 150, 200);
+    --third-color: rgb(0, 123, 254);
+    --first-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ----- BASE ----- */
 *{
     margin: 0;
@@ -43,9 +59,11 @@ html{
     cursor: pointer;
     transition: .4s;
 }
-.btn>i{
+.btn>i {
     margin-left: 10px;
 }
+
+
 .btn:hover{
     background: var(--second-color);
     color: var(--color-white);
@@ -294,17 +312,6 @@ h3{
     text-align: center;
     font-size: 15px;
     color: #777;
-}
-.about-btn button{
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    background: var(--first-color);
-    color: var(--color-white);
-    border-radius: 30px;
-}
-.about-btn button:hover{
-    background: var(--first-color-hover);
 }
 
 /* ----- ABOUT / SKILLS BOX ----- */

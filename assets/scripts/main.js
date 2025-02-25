@@ -115,3 +115,24 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+const toggleButton = document.getElementById("theme-toggle");
+
+// Verificar si el usuario ya tiene un tema guardado en localStorage
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+}
+
+// Alternar entre claro y oscuro
+toggleButton.addEventListener("click", () => {
+    let theme = document.documentElement.getAttribute("data-theme");
+    if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+    }
+});
