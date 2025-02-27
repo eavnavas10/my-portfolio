@@ -18,7 +18,7 @@
 
 }
 
-/* Modo oscuro */
+/* DARK MODE */
 [data-theme="dark"] {
     --body-color: rgb(20, 20, 20);
     --color-white: rgb(34, 34, 34);
@@ -26,11 +26,11 @@
     --text-color-second: rgb(200, 200, 200);
     --text-color-third: rgb(0, 255, 255);
 
-    --first-color: rgb(75, 63, 160);
-    --first-color-hover: rgb(30, 72, 180);
+    --first-color: rgb(113, 116, 196);
+    --first-color-hover: rgb(82, 121, 220);
 
     --second-color: rgb(0, 150, 200);
-    --third-color: rgb(0, 123, 254);
+    --third-color: rgb(118, 179, 245);
     --first-shadow-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -113,7 +113,7 @@ nav{
 }
 .nav-link{
     text-decoration: none;
-    color: var(--text-color-second);
+    color: var(--text-color-third);
     font-weight: 500;
     padding-inline: 15px;
     margin-inline: 20px;
@@ -523,7 +523,10 @@ footer{
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
-        display: none;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
     }
     .nav-menu.responsive{
         left: 0;
@@ -547,6 +550,7 @@ footer{
     }
     .nav-menu-btn{
         display: flex;
+        color: var(--text-color-second);
         align-items: center;
         justify-content: center;
     }
